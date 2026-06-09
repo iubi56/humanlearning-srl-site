@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Human Learning</title>
+    <meta name="description" content="Human Learning - sito in riallestimento.">
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17202a;
+        --muted: #5d6874;
+        --line: #d9dde3;
+        --bg: #f6f7f8;
+        --panel: #ffffff;
+        --accent: #1f6f5b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+
+      main {
+        width: min(760px, calc(100% - 32px));
+        padding: 48px 0;
+      }
+
+      .brand {
+        border-top: 4px solid var(--accent);
+        background: var(--panel);
+        padding: 40px;
+        box-shadow: 0 16px 40px rgba(23, 32, 42, 0.08);
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(2rem, 5vw, 4rem);
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+        max-width: 58ch;
+        font-size: 1.05rem;
+        color: var(--muted);
+      }
+
+      .status {
+        margin-top: 28px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        font-size: 0.95rem;
+        color: var(--ink);
+      }
+
+      a {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="brand" aria-label="Human Learning">
+        <h1>Human Learning</h1>
+        <p>
+          Il sito e' in riallestimento. I canali operativi restano attivi
+          durante la migrazione tecnica.
+        </p>
+        <p class="status">
+          Per comunicazioni: <a href="mailto:u.bonora@humanlearning.srl">u.bonora@humanlearning.srl</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
