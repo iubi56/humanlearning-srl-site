@@ -7,13 +7,11 @@
     <meta name="description" content="Human Learning - sito in riallestimento.">
     <style>
       :root {
-        color-scheme: light;
-        --ink: #17202a;
-        --muted: #5d6874;
-        --line: #d9dde3;
-        --bg: #f6f7f8;
-        --panel: #ffffff;
-        --accent: #1f6f5b;
+        color-scheme: dark;
+        --ink: #f7f8f8;
+        --muted: #d6dcdf;
+        --line: rgba(255, 255, 255, 0.35);
+        --accent: #c9f2df;
       }
 
       * {
@@ -23,24 +21,44 @@
       body {
         margin: 0;
         min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: var(--bg);
+        background: #0d1114;
         color: var(--ink);
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.5;
+        overflow: hidden;
+      }
+
+      .video-bg {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.82;
+      }
+
+      .shade {
+        position: fixed;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(5, 8, 10, 0.84), rgba(5, 8, 10, 0.45) 54%, rgba(5, 8, 10, 0.18)),
+          linear-gradient(0deg, rgba(5, 8, 10, 0.70), rgba(5, 8, 10, 0.05) 48%, rgba(5, 8, 10, 0.35));
       }
 
       main {
-        width: min(760px, calc(100% - 32px));
-        padding: 48px 0;
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        width: min(980px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 42px 0;
       }
 
       .brand {
-        border-top: 4px solid var(--accent);
-        background: var(--panel);
-        padding: 40px;
-        box-shadow: 0 16px 40px rgba(23, 32, 42, 0.08);
+        max-width: 760px;
+        padding: 0 0 22px;
       }
 
       h1 {
@@ -49,6 +67,7 @@
         line-height: 1;
         font-weight: 700;
         letter-spacing: 0;
+        text-shadow: 0 3px 18px rgba(0, 0, 0, 0.55);
       }
 
       p {
@@ -56,6 +75,7 @@
         max-width: 58ch;
         font-size: 1.05rem;
         color: var(--muted);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
       }
 
       .status {
@@ -69,9 +89,25 @@
       a {
         color: var(--accent);
       }
+
+      @media (max-width: 680px) {
+        main {
+          width: min(100% - 28px, 980px);
+          padding: 30px 0;
+        }
+
+        .shade {
+          background:
+            linear-gradient(0deg, rgba(5, 8, 10, 0.88), rgba(5, 8, 10, 0.28) 70%, rgba(5, 8, 10, 0.35));
+        }
+      }
     </style>
   </head>
   <body>
+    <video class="video-bg" autoplay loop muted playsinline poster="">
+      <source src="assets/2mega_2.mp4" type="video/mp4">
+    </video>
+    <div class="shade" aria-hidden="true"></div>
     <main>
       <section class="brand" aria-label="Human Learning">
         <h1>Human Learning</h1>
